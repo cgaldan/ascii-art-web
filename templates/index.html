@@ -5,44 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII Art Generator</title>
     <link rel="stylesheet" href="/style/style.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0/tsparticles.min.js"></script> -->
+    <link rel="stylesheet" href="/style/circles.css">
 </head>
 <body>
-
-    <div id="particles-js"></div>
 
     <header>
         <h1>ASCII Art Generator</h1>
     </header>
-    <div class="container">
-        <form id="ascii-form" action="/" method="POST">
-            <label for="input">Enter text:</label>
-            <textarea id="input" name="input" required placeholder="Type your text here...">{{.Input}}</textarea>
-            <label for="banner">Choose a Font:</label>
-            <select id="banner" name="banner" required>
-                {{ range .Banners }}
-                    <option value="{{ . }}" {{if eq . $.Banner}}selected{{end}}>{{ . }}</option>
-                {{ end }}
-                
-            </select>
-            <div class="color-inputs">
-                <label for="color">Select a color for ascii art:</label><br>
-                <input type="color" id="color" name="color" value="{{.Color}}"><br><br>
-                <label for="color">Select a color for background:</label><br>
-                <input type="color" id="background-color" name="background-color" value="{{.BackgroundColor}}"><br><br>
+    
+    <main>
+        <div class="container">
+            <form id="ascii-form" action="/" method="POST">
+                <label for="input">Enter text:</label>
+                <textarea id="input" name="input" required placeholder="Type your text here...">{{.Input}}</textarea>
+                <label for="banner">Choose a Font:</label>
+                <select id="banner" name="banner" required>
+                    {{ range .Banners }}
+                        <option value="{{ . }}" {{if eq . $.Banner}}selected{{end}}>{{ . }}</option>
+                    {{ end }}
+                    
+                </select>
+                <div class="color-inputs">
+                    <label for="color">Select a color for ascii art:</label><br>
+                    <input type="color" id="color" name="color" value="{{.Color}}"><br><br>
+                    <label for="color">Select a color for background:</label><br>
+                    <input type="color" id="background-color" name="background-color" value="{{.BackgroundColor}}"><br><br>
+                </div>
+                <button type="submit">Generate ASCII Art</button>
+            </form>
+            <div  class="ascii-display" style="color: {{.Color}}; background-color: {{.BackgroundColor}};">
+                {{if .AsciiArt}}
+                    <pre>{{.AsciiArt}}</pre>
+                {{else}}
+                    <p>No ASCII art to display yet. Enter text and generate!</p>
+                {{end}}
             </div>
-            <button type="submit">Generate ASCII Art</button>
-        </form>
-        <div  class="ascii-display" style="color: {{.Color}}; background-color: {{.BackgroundColor}};">
-            {{if .AsciiArt}}
-                <pre>{{.AsciiArt}}</pre>
-            {{else}}
-                <p>No ASCII art to display yet. Enter text and generate!</p>
-            {{end}}
         </div>
-    </div>
+    </main>
 
-   
     <footer>
         <p>&copy; 2024 ASCII Art Generator | All Rights Reserved</p>
     </footer>
@@ -59,6 +59,5 @@
             <li></li>
             <li></li>
     </ul>
-    <!-- <script src="style/particles.js"></script> -->
 </body>
 </html>
