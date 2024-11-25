@@ -9,6 +9,7 @@ import (
 
 func main() {
 	http.Handle("/style/", http.StripPrefix("/style/", http.FileServer(http.Dir("style"))))
+	// Handle requests to the root path using the PageRender function.
 	http.HandleFunc("/", server.PageRender)
 
 	log.Println("Starting server on :8080")

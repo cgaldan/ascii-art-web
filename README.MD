@@ -1,7 +1,7 @@
-# Ascii Art Web
+# Ascii Art Web Stylize
 
 ## Description
-The **Ascii Art Web** is a web-based tool that takes user input (text) and generates corresponding ASCII art. The server processes text inputs to create a visual representation of the text using ASCII characters. This tool can be used to convert any textual input into a styled ASCII format for creative or decorative purposes.
+The **Ascii Art Web Stylize** is a web-based tool that takes user input (text) and generates corresponding ASCII art. The server processes text inputs to create a visual representation of the text using ASCII characters. This tool can be used to convert any textual input into a styled ASCII format for creative or decorative purposes.
 
 ## Authors
 - **cgkaldan** - Christos Gkaldanidis
@@ -21,9 +21,11 @@ Creators and primary developers
 
 3. **Open the server in your browser**
     Open the web browser and go to the following URL:
+
     http://localhost:8080
     
 4. **Have fun**
+    Enjoy the website!!!
 
 
 ## Implementation Details: Algorithm
@@ -49,6 +51,3 @@ The ASCII Art Generator works by transforming a given text input into a visual r
 2. **Generate ASCII art** for each character using a predefined set of patterns.
 4. **Assemble the ASCII art** line by line.
 5. **Return the ASCII art** to the user, with optional error handling or progress indication.
-
-
-
