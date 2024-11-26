@@ -5,17 +5,19 @@ body {
     font-family: 'Exo', sans-serif;
     background: linear-gradient(135deg, #ff00bf, #4e54c8, #060eaa);    
     background-size: cover;
-    /* background-position: center; */
     margin: 0;
     padding: 0;
-    display:flexbox;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
     color: #e0e0e0;
     position: relative;
-    /* z-index: 0; */
+    overflow-x: hidden;
+}
+
+.error {
+    display: flex;
 }
 
 main {
@@ -32,6 +34,7 @@ main {
 }
 
 header {
+    display: flexbox;
     position:relative;
     top: 0;
     width: 100%;
@@ -43,7 +46,6 @@ header {
 }
 
 h1 {
-    /* margin: 0; */
     font-size: 2.5em;
     color: #9bced1;
 }
@@ -94,7 +96,6 @@ form textarea:focus, form select:focus, input[type="color"]:focus {
 
 textarea {
     height: 120px;
-    /* resize: none; */
 }
 
 
