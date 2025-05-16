@@ -15,18 +15,26 @@ Creators and primary developers
     git clone https://platform.zone01.gr/git/cgkaldan/ascii-art-web.git
     cd ascii-art-web
 
-2. **Start the server**
+2. **Start the server in a container environment**
+    ```bash
+    ./build_run.sh
+
+3. or you can **start the server locally (optional)**
     ```bash
     go run .
 
-3. **Open the server in your browser**
+4. **Open the server in your browser**
     Open the web browser and go to the following URL:
-
+    ```bash
     http://localhost:8080
     
-4. **Have fun**
-    Enjoy the website!!!
+5. **After running with docker**
+- if you want to remove the enviornment you created with the script, then run:
+    ```bash
+    ./cleanup.sh
 
+6. **Have fun**
+    Enjoy the website!!!
 
 ## Implementation Details: Algorithm
 
